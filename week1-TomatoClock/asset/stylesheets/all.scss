@@ -1,0 +1,306 @@
+@import "reset"; //css reset
+
+$text-color: #ff4384;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html {
+  font-family: "Roboto";
+}
+
+.main {
+  max-width: 1280px;
+  height: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  .big-play {
+    z-index: 30;
+    position: absolute;
+    width: 540px;
+    height: 540px;
+    border: 4px solid #ff4384;
+    border-radius: 50%;
+    left: 48%;
+    top: 15%;
+    .big-play-body {
+      position: absolute;
+      width: 95%;
+      height: 95%;
+      left: 15px;
+      top: 15px;
+      background-color: #ff4384;
+      border-radius: 50%;
+    }
+    .big-play-btn {
+      position: absolute;
+      z-index: 60;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      top: 40%;
+      left: 40%;
+      .triangle-1 {
+        //設定三角形
+        position: absolute;
+        border-color: transparent transparent transparent #ff4384;
+        border-style: solid;
+        border-width: 20px 0 20px 20px;
+        top: 27px;
+        left: 41%;
+        width: 0;
+        height: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  .main-left {
+    background-color: #ffedf7;
+    .todo-bar {
+      position: relative;
+      input {
+        font-size: 16px;
+        border: transparent;
+        background-color: #ffffff;
+        width: 445px;
+        height: 56px;
+        margin-left: 40px;
+        margin-top: 40px;
+        &::-webkit-input-placeholder {
+          color: $text-color;
+          padding: 30px;
+          font-style: italic;
+        }
+      }
+      a {
+        position: absolute;
+        right: 10px;
+        top: 56px;
+        font-size: 20px;
+        color: $text-color;
+        cursor: pointer;
+      }
+    }
+    .todo-thing {
+      display: flex;
+      margin-left: 40px;
+      margin-top: 40px;
+      padding-top: 80px;
+      .circle {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        border: 2px solid #003164;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+      .title {
+        display: inline-block;
+        color: #003164;
+        font-size: 24px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+    }
+    .time {
+      margin-left: 40px;
+      width: 454px;
+      height: 206px;
+      color: $text-color;
+      font-size: 176px;
+      font-weight: bold;
+    }
+    .todo-list {
+      margin-left: 40px;
+      padding-top: 60px;
+      height: 203px;
+      overflow: hidden;
+      position: relative;
+      .todos {
+        display: flex;
+        align-items: center;
+        width: 445px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #003164;
+        .todos-circle {
+          width: 20px;
+          height: 20px;
+          border: 1px solid #003164;
+          border-radius: 50%;
+        }
+        .todos-text {
+          font-size: 16px;
+          font-weight: bold;
+          padding-left: 10px;
+          color: #003164;
+        }
+        .todos-play {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .todo-list-bot {
+      margin-left: 40px;
+      width: 445px;
+      text-align: right;
+      span {
+        font-size: 16px;
+        font-weight: bold;
+        color: #ff4384;
+        cursor: pointer;
+      }
+    }
+  }
+  .main-right {
+    background-color: #003164;
+    .functions {
+      padding-top: 35px;
+      padding-right: 35px;
+      a {
+        color: white;
+        font-size: 30px;
+      }
+    }
+    .title {
+      position: relative;
+      writing-mode: vertical-lr;
+      color: #ffffff;
+      font-size: 25px;
+      left: 80%;
+      top: 45%;
+    }
+  }
+}
+
+// TodoListPage style
+
+.Todolistpage {
+  max-width: 1280px;
+  height: 800px;
+  background-color: #003164;
+  margin: 0 auto;
+  .Todolist {
+    padding-left: 80px;
+    ul {
+      padding-top: 20px;
+    }
+    .page {
+      padding-top: 40px;
+      font-size: 36px;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      &.active {
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.page-todo {
+  .todo-bar {
+    padding-top: 20px;
+    position: relative;
+    input {
+      font-size: 16px;
+      border: transparent;
+      background-color: #ffffff;
+      width: 445px;
+      height: 56px;
+      margin-left: 40px;
+      margin-top: 40px;
+      &::-webkit-input-placeholder {
+        color: $text-color;
+        padding: 30px;
+        font-style: italic;
+      }
+    }
+    a {
+      position: absolute;
+      right: 10px;
+      top: 80px;
+      font-size: 20px;
+      color: $text-color;
+      cursor: pointer;
+    }
+  }
+  .todo-page {
+    width: 445px;
+    margin-left: 40px;
+    margin-top: 40px;
+    .card {
+      border: 1px solid rgba($color: #9293dd, $alpha: 0.3);
+    }
+    .accordion {
+      cursor: pointer;
+      background-color: rgba($color: #9293dd, $alpha: 0.3);
+      color: rgb(50, 132, 240);
+    }
+    .todo-page-body {
+      background-color: #003164 !important;
+    }
+    .todo-list {
+      .todos {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid white;
+        .todos-circle {
+          width: 20px;
+          height: 20px;
+          border: 1px solid white;
+          border-radius: 50%;
+        }
+        .todos-text {
+          font-size: 16px;
+          font-weight: bold;
+          padding-left: 10px;
+        }
+        .todos-play {
+          width: 24px;
+          height: 24px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #003164;
+  font-size: 20px;
+  color: white;
+  .dropdown-btn {
+    cursor: pointer;
+  }
+  .dropdown-menu {
+    transform: translateY(0px);
+    transition: all 1s;
+  }
+  .dropdown-menu.show {
+    display: inline;
+    top: 50%;
+    position: absolute;
+    background: rgba($color: gray, $alpha: 0.7);
+    transform: translateY(-30px);
+    transition: transform 1s;
+    a {
+      color: #ffffff;
+      text-decoration:none;
+    }
+  }
+
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/stylesheets/all.css">
+    <title>TomatoClock</title>
+</head>
+
+<body>
+    <div class="dropdown">
+        <span class="dropdown-btn">中文(繁體)</span>
+        <div class="dropdown-menu">
+            <ul>
+                <li class="dropdown-item"><a href="">繁體中文</a></li>
+                <li class="dropdown-item"><a href="">簡體中文</a></li>
+                <li class="dropdown-item"><a href="">English</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="Todolistpage">
+
+        <div class="row">
+            <div class="col-md-4 Todolist">
+                <ul>
+                    <li class="page active">
+                        <i class="fas fa-list"></i>
+                        TO-DO-LIST
+                    </li>
+                    <li class="page">
+                        <i class="fas fa-music"></i></a>
+                        ANALYTICS
+                    </li>
+                    <li class="page">
+                        <i class="fas fa-chart-bar"></i>
+                        RIGHTONES
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 page-todo">
+                <div>
+                    <label for="" class="todo-bar">
+                        <input type="text" placeholder="Add A NEW MISSION" class="todo-text"
+                            onkeypress="keyenter(event)">
+                        <a class="addtodo">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </label>
+                </div>
+                <div class="todo-page" id="accordion">
+                    <div class="card">
+                        <span class="accordion" data-toggle="collapse" data-target="#todo" aria-expanded="true"
+                            aria-controls="todo">
+                            <div class="card-header">
+                                <h2 class="mb-0">
+                                    TO-DO
+                                </h2>
+                            </div>
+                        </span>
+
+
+                        <div id="todo" class="collapse todo-page-body" aria-labelledby="headingOne"
+                            data-parent="#accordion">
+                            <div class="card-body" style="color:white;">
+                                <div class="todo-list">
+                                    <div class="todos">
+                                        <div class="todos-circle"></div>
+                                        <div class="todos-text mr-auto">The second Thing to do today</div>
+                                        <div class="todos-play">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="todo-page" id="accordion2">
+                    <div class="card">
+                        <span class="accordion2" data-toggle="collapse" data-target="#todo2" aria-expanded="true"
+                            aria-controls="todo">
+                            <div class="card-header">
+                                <h2 class="mb-0">
+                                    DONE
+                                </h2>
+                            </div>
+                        </span>
+
+
+                        <div id="todo2" class="collapse todo-page-body" aria-labelledby="headingOne"
+                            data-parent="#accordion2">
+                            <div class="card-body" style="color:white;">
+                                <div class="todo-list">
+                                    <div class="todos">
+                                        <div class="todos-circle"></div>
+                                        <div class="todos-text mr-auto">The second Thing to do today</div>
+                                        <div class="todos-play">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="asset/js/all.js"></script>
+</body>
+
+</html>

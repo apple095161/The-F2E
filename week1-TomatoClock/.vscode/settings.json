@@ -1,0 +1,6 @@
+{
+    "phpformatter.phpPath": "/usr/local/bin/phpformatter.phpPath",
+    "phpformatter.notifications": false,
+    "phpformatter.composer": true,
+    "git.ignoreLimitWarning": true
+}
